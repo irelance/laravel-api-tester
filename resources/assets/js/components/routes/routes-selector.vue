@@ -9,6 +9,7 @@
                 <i class="fa fa-refresh"></i>
             </a>
         </header>
+        <div style="overflow-y: scroll;max-height:500px">
             <div class="notification"
                  v-if="filteredRoutes.length === 0 && ! isLoading"
                  transition="fade-in"
@@ -26,6 +27,7 @@
             >
                 Can't load routes. Check console for details.
             </div>
+        </div>
     </div>
 </template>
 

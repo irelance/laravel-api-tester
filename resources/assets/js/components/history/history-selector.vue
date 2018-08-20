@@ -8,17 +8,19 @@
                @click="clearHistory"
             ><i class="fa fa-ban"></i></a>
         </header>
-        <div class="notification"
-             v-if="history.length === 0"
-             transition="fade-in"
-        >
-            No history stored
+        <div style="overflow-y: scroll;max-height:500px">
+            <div class="notification"
+                 v-if="history.length === 0"
+                 transition="fade-in"
+            >
+                No history stored
+            </div>
+            <vm-moment v-for="moment in filteredMoments"
+                       class="card-item"
+                    transition="slip"
+                    :moment="moment"
+            ></vm-moment>
         </div>
-        <vm-moment v-for="moment in filteredMoments"
-                   class="card-item"
-                transition="slip"
-                :moment="moment"
-        ></vm-moment>
     </div>
 </template>
 
