@@ -4,6 +4,18 @@
             <div class="column is-full-desktop is-7-widescreen">
                 <div class="card current-route is-fullwidth">
                     <header class="card-header">
+                        <p class="card-header-title">
+                            <input class="input is-expanded is-fullwidth"
+                                   type="text"
+                                   placeholder="Name"
+                                   title="Title"
+                                   v-model="request.name"
+                            >
+                        </p>
+                    </header>
+                </div>
+                <div class="card current-route is-fullwidth">
+                    <header class="card-header">
                         <p class="card-header-title">Headers</p>
                     </header>
                     <vm-headers :headers="request.headers"
